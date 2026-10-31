@@ -6,40 +6,92 @@
     <title>Eco Estilo</title>
 
     <style>
-        body{
+        
+        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+
+        *{
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        body{
+            font-family: "Bree Serif",serif;
+            font-weight: 400;
+            font-style: normal;
+        }
 
-        /*Menu Principal*/
         #menuPrincipal{
-            display: flex; 
-            flex-direction: row; 
-            justify-content: space-evenly; 
             background-color: #7AAA83;
         }
 
-
-
-        /*Enlaces del menu */
-
         nav{
-            display:flex; 
-            justify-content: space-around;
+            display:inline-flex;
         }
+
+        .enlaces{
+             background-color:#d8f5dd;
+             border:2px solid #415d47;
+             width:fit-content;
+        }
+
 
         .a_enlaces{
             color: #415d47; 
-            background-color: #d8f5dd;
-            border:2px solid #415d47; 
+            border-right:2px solid #415d47; 
             padding-top:25px;
             padding-bottom:25px;
-            padding-left:75px; 
-            padding-right:75px; 
+            padding-left:55px; 
+            padding-right:55px; 
             font-size: 35px;
         }
 
+        .a_enlaces:last-of-type{
+            border:none;
+        }
+
+        .a_enlaces:hover{
+            color: #7AAA83;
+        }
+
+
+        #banner{
+            background-image: url(../img/banner.png);
+            background-size:auto;
+            height: 300px;
+        }
+
+        h1{
+            margin: 0px;
+            color: #415d47;
+        }
+
+        h2{
+            color:#415d47 ;
+        }
         
+        .imagenes_productos{
+            border: 3px solid #415d47;
+            border-radius: 5px;
+        }
+
+        footer{
+            background-color: #7AAA83;
+        }
+
+        .imagenes_redes{
+            width: 40px;
+        }
+
+        .masEnlaces{
+            background-color: #d8f5dd;
+        }
+
+        .masEnlaces > a.enlacesExtra{
+            color: #415d47;
+            border:2px solid #415d47;
+        }
 
 
     </style>
@@ -48,55 +100,69 @@
 <body>
     
     <header>
-        <div id="menuPrincipal" style="display: flex; flex-direction: row; justify-content: space-evenly; background-color: #7AAA83;">
-            <img src="./img/Logo.png" alt="" class="logo">
+        <div id="menuPrincipal" style="background-color: #7AAA83;">
+            <img src="../img/Logo.png" alt="" class="logo">
             <div id="buscador" style="margin: 0px;">
+                <form action="#" method="get">
                     <input type="text" name="buscador" id="busca" style="margin: 0px;">
-                    <button type="button" class="boton_buscar"><img src="./img/search.svg" alt="buscar" class="imagen_buscar"></button>
+                    <button type="button" class="boton_buscar"><img src="../img/search.svg" alt="buscar" class="imagen_buscar"></button>
+                </form>
             </div>
             <div id="usuario">
-                <img src="./img/person.svg" alt="" class="imagen_usuario">
-                <a href="">Inicio Sesion</a>
+                <img src="../img/person.svg" alt="" class="imagen_usuario">
+                <a href="#" class="inicio_sesion" style="color: #d8f5dd;">Inicio Sesion</a>
             </div>
             <div id="compra">
-                <img src="./img/shopping_cart.svg" alt="carrito" class="imagen_carrito">
+                <a href="#"><img src="../img/shopping_cart.svg" alt="carrito" class="imagen_carrito"></a>
             </div>
         </div>
-        <div class="enlaces" style=" background-color:#d8f5dd;border:1px solid #415d47; height: auto;">
+        <div class="enlaces" style=" background-color:#d8f5dd;border:1px solid #415d47; ">
             <nav>
-                <a href="#" class="a_enlaces" style="color: #415d47; background-color: #d8f5dd;border-right:2px solid #415d47; padding-left:75px; padding-right:75px; font-size: 35px;">Mujer</a>
-                <a href="#" class="a_enlaces" style="color: #415d47; background-color: #d8f5dd; border-right:2px solid #415d47; padding-left:75px; padding-right:75px; font-size: 35px;">Hombre</a>
-                <a href="#" class="a_enlaces" style="color: #415d47; background-color: #d8f5dd; border-right:2px solid #415d47; padding-left:75px; padding-right:75px; font-size: 35px;">Niño/a</a>
-                <a href="#" class="a_enlaces" style="color: #415d47; background-color: #d8f5dd;border-right:2px solid #415d47; padding-left:75px; padding-right:75px; font-size: 35px;">Accesorios</a>
-                <a href="#" class="a_enlaces" style="color: #415d47; background-color: #d8f5dd; padding-left:75px; padding-right:75px; font-size: 35px;">Otros</a>
+                <a href="#" class="a_enlaces">Mujer</a>
+                <a href="#" class="a_enlaces">Hombre</a>
+                <a href="#" class="a_enlaces" style="color: #415d47; ">Niño/a</a>
+                <a href="#" class="a_enlaces" style="color: #415d47; ">Accesorios</a>
+                <a href="#" class="a_enlaces" style="color: #415d47; ">Otros</a>
             </nav>
         </div>
     </header>
     <main>
-        <div id="cartel">
+        <div id="banner">
             <h1>Las mejores Prendas para vestir</h1>
         </div>
         <div id="novedades">
-            <h2>Novedades</h2>
-            <div id="novedades-productos" style="display: flex; flex-direction:row;">
+            <h2 style="color:#415d47">Novedades</h2>
+            <div id="novedades_productos" >
                 <div class="productos" style="margin: 20px;">
-                    <img src="./img/Ropa_1.png" alt="" class="imagenes_productos">
-                    <p class="texto_productos">Vestido</p>
+                    <img src="../img/Ropa_1.png" alt="" class="imagenes_productos">
+                    <div class="texto_descripcionSimple">
+                        <p class="texto_producto" style="color:#415d47">Vestido</p>
+                        <p class="texto_precio"  style="color:#415d47">0.00$</p>
+                    </div>
                 </div>
 
                 <div class="productos" style="margin: 20px;">
-                    <img src="./img/Ropa_1.png" alt="" class="imagenes_productos">
-                    <p class="texto_productos">Vestido</p>
+                    <img src="../img/Ropa_1.png" alt="" class="imagenes_productos">
+                    <div class="texto_descripcionSimple">
+                        <p class="texto_producto"  style="color:#415d47">Vestido</p>
+                        <p class="texto_precio" style="color:#415d47">0.00$</p>
+                    </div>
                 </div>
                 
-                <div class="productos" style="margin: 20px;" class="imagenes_productos">
-                    <img src="./img/Ropa_1.png" alt="">
-                    <p class="texto_productos">Vestido</p>
+                <div class="productos" style="margin: 20px;" >
+                    <img src="../img/Ropa_1.png" alt="" class="imagenes_productos">
+                    <div class="texto_descripcionSimple">
+                        <p class="texto_producto" style="color:#415d47">Vestido</p>
+                        <p class="texto_precio"  style="color:#415d47">0.00$</p>
+                    </div>
                 </div>
                 
-                <div class="productos" style="margin: 20px;" class="imagenes_productos">
-                    <img src="./img/Ropa_1.png" alt="">
-                    <p class="texto_productos">Vestido</p>
+                <div class="productos" style="margin: 20px;" >
+                    <img src="../img/Ropa_1.png" alt="" class="imagenes_productos">
+                    <div class="texto_descripcionSimple">
+                        <p class="texto_producto" style="color:#415d47">Vestido</p>
+                        <p class="texto_precio" style="color:#415d47">0.00$</p>
+                    </div>
                 </div>
                
             </div>
@@ -104,19 +170,19 @@
     </main>
     <footer>
         <div id="redes">
-            <a href=""><img src="." alt=""></a>
-            <a href=""><img src="." alt=""></a>
-            <a href=""><img src="." alt=""></a>
+            <a href="#"><img src="../img/Facebook.png" alt="facebook" class="imagenes_redes"></a>
+            <a href="#"><img src="../img/Instagram.png" alt="instagram" class="imagenes_redes"></a>
+            <a href="#"><img src="../img/TikTok.png" alt="tiktok" class="imagenes_redes"></a>
         </div>
-        <div id="masLinks">
+        <div id="masEnlaces">
             <div>
-                <a href=".">Sobre Nosotros</a>
+                <a href="#" class="enlacesExtra" style="color:#415d47">Sobre Nosotros</a>
             </div>
             <div>
-                <a href=".">Terminos y Condiciones</a>
+                <a href="#" class="enlacesExtra" style="color:#415d47">Terminos y Condiciones</a>
             </div>
             <div>
-                <a href=".">Ayuda</a>
+                <a href="#" class="enlacesExtra" style="color:#415d47">Ayuda</a>
             </div>
         </div>
     </footer>
