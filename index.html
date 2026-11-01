@@ -4,119 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eco Estilo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilo.css">
 
-    <style>
-        body{
-            margin: 0;
-        }
-
-
-        /*Menu Principal*/
-        #menuPrincipal{
-            display: flex; 
-            flex-direction: row; 
-            justify-content: space-evenly; 
-            background-color: #7AAA83;
-        }
-
-
-
-        /*Enlaces del menu */
-
-        nav{
-            display:flex; 
-            justify-content: space-around;
-        }
-
-        .a_enlaces{
-            color: #415d47; 
-            background-color: #d8f5dd;
-            border:2px solid #415d47; 
-            padding-top:25px;
-            padding-bottom:25px;
-            padding-left:75px; 
-            padding-right:75px; 
-            font-size: 35px;
-        }
-
-        
-
-
-    </style>
 
 </head>
 <body>
     
     <header>
-        <div id="menuPrincipal" style="display: flex; flex-direction: row; justify-content: space-evenly; background-color: #7AAA83;">
+        <div id="menuPrincipal">
             <img src="./img/Logo.png" alt="" class="logo">
-            <div id="buscador" style="margin: 0px;">
-                    <input type="text" name="buscador" id="busca" style="margin: 0px;">
+            <div id="buscador">
+                <form action="#" method="get">
+                    <input type="text" name="buscador" id="busca">
                     <button type="button" class="boton_buscar"><img src="./img/search.svg" alt="buscar" class="imagen_buscar"></button>
+                </form>
             </div>
             <div id="usuario">
                 <img src="./img/person.svg" alt="" class="imagen_usuario">
-                <a href="">Inicio Sesion</a>
+                <a href="#" class="inicio_sesion">Inicio Sesion</a>
             </div>
             <div id="compra">
-                <img src="./img/shopping_cart.svg" alt="carrito" class="imagen_carrito">
+                <a href="#"><img src="./img/shopping_cart.svg" alt="carrito" class="imagen_carrito"></a>
             </div>
         </div>
-        <div class="enlaces" style=" background-color:#d8f5dd;border:1px solid #415d47; height: auto;">
+        <div class="enlaces">
             <nav>
-                <a href="#" class="a_enlaces" style="color: #415d47; background-color: #d8f5dd;border-right:2px solid #415d47; padding-left:75px; padding-right:75px; font-size: 35px;">Mujer</a>
-                <a href="#" class="a_enlaces" style="color: #415d47; background-color: #d8f5dd; border-right:2px solid #415d47; padding-left:75px; padding-right:75px; font-size: 35px;">Hombre</a>
-                <a href="#" class="a_enlaces" style="color: #415d47; background-color: #d8f5dd; border-right:2px solid #415d47; padding-left:75px; padding-right:75px; font-size: 35px;">Niño/a</a>
-                <a href="#" class="a_enlaces" style="color: #415d47; background-color: #d8f5dd;border-right:2px solid #415d47; padding-left:75px; padding-right:75px; font-size: 35px;">Accesorios</a>
-                <a href="#" class="a_enlaces" style="color: #415d47; background-color: #d8f5dd; padding-left:75px; padding-right:75px; font-size: 35px;">Otros</a>
+                <a href="#" class="a_enlaces">Mujer</a>
+                <a href="#" class="a_enlaces">Hombre</a>
+                <a href="#" class="a_enlaces">Niño/a</a>
+                <a href="#" class="a_enlaces">Accesorios</a>
+                <a href="#" class="a_enlaces">Otros</a>
             </nav>
         </div>
     </header>
     <main>
-        <div id="cartel">
-            <h1>Las mejores Prendas para vestir</h1>
+        <div id="banner">
+            <h1 class="texto_banner">Las mejores Prendas para vestir</h1>
         </div>
         <div id="novedades">
-            <h2>Novedades</h2>
-            <div id="novedades-productos" style="display: flex; flex-direction:row;">
-                <div class="productos" style="margin: 20px;">
-                    <img src="./img/Ropa_1.png" alt="" class="imagenes_productos">
-                    <p class="texto_productos">Vestido</p>
+            <h2 class="texto_novedades">Novedades</h2>
+            <div id="novedades_productos">
+                <div class="productos">
+                    <img src="./img/Ropa_1.png" alt="ropa" class="imagenes_productos">
+                    <div class="texto_descripcionSimple">
+                        <p class="texto_producto">Vestido</p>
+                        <p class="texto_precio">0.00$</p>
+                    </div>
                 </div>
 
-                <div class="productos" style="margin: 20px;">
-                    <img src="./img/Ropa_1.png" alt="" class="imagenes_productos">
-                    <p class="texto_productos">Vestido</p>
+                <div class="productos">
+                    <img src="./img/Ropa_1.png" alt="ropa" class="imagenes_productos">
+                    <div class="texto_descripcionSimple">
+                        <p class="texto_producto">Vestido</p>
+                        <p class="texto_precio">0.00$</p>
+                    </div>
                 </div>
                 
-                <div class="productos" style="margin: 20px;" class="imagenes_productos">
-                    <img src="./img/Ropa_1.png" alt="">
-                    <p class="texto_productos">Vestido</p>
+                <div class="productos">
+                    <img src="./img/Ropa_1.png" alt="ropa" class="imagenes_productos">
+                    <div class="texto_descripcionSimple">
+                        <p class="texto_producto">Vestido</p>
+                        <p class="texto_precio">0.00$</p>
+                    </div>
                 </div>
                 
-                <div class="productos" style="margin: 20px;" class="imagenes_productos">
-                    <img src="./img/Ropa_1.png" alt="">
-                    <p class="texto_productos">Vestido</p>
+                <div class="productos">
+                    <img src="./img/Ropa_1.png" alt="ropa" class="imagenes_productos">
+                    <div class="texto_descripcionSimple">
+                        <p class="texto_producto">Vestido</p>
+                        <p class="texto_precio">0.00$</p>
+                    </div>
                 </div>
+
                
             </div>
         </div>
     </main>
     <footer>
         <div id="redes">
-            <a href=""><img src="." alt=""></a>
-            <a href=""><img src="." alt=""></a>
-            <a href=""><img src="." alt=""></a>
+            <a href="#"><img src="./img/Facebook.png" alt="" class="imagenes_redes"></a>
+            <a href="#"><img src="./img/Instagram.png" alt="" class="imagenes_redes"></a>
+            <a href="#"><img src="./img/TikTok.png" alt="" class="imagenes_redes"></a>
         </div>
-        <div id="masLinks">
-            <div>
-                <a href=".">Sobre Nosotros</a>
+        <div id="masEnlaces">
+            <div class="enlaces_footer">
+                <a href="#" >Sobre Nosotros</a>
             </div>
-            <div>
-                <a href=".">Terminos y Condiciones</a>
+            <div class="enlaces_footer">
+                <a href="#" >Terminos y Condiciones</a>
             </div>
-            <div>
-                <a href=".">Ayuda</a>
+            <div class="enlaces_footer">
+                <a href="#" >Ayuda</a>
             </div>
         </div>
     </footer>
