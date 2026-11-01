@@ -4,7 +4,8 @@
     --color-base2:#7AAA83;
     --color-base3:#d8f5dd;
     --color-extra1:#285b64;
-    --color-extra2:#caf1fa;
+    --color-extra2:#50A8B7;
+    --color-extra3:#caf1fa;
     --color-fondo-claro:#ffffff;
     --fuente-principal: "Bree Serif",serif;
 }
@@ -24,6 +25,7 @@ body{
 }
 
 /*Header*/
+
 /*Menu Principal*/
 #menuPrincipal{
     display: flex; 
@@ -31,6 +33,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly; 
     align-items: center;
+    padding:0.5%;
     background-color: var(--color-base2);
 }
 
@@ -50,28 +53,67 @@ body{
     border-bottom-right-radius: 5px;
 }
 
+form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 #busca{
-    margin: 0px;
-    height: 30px;
-    width: 350px ;
+    margin: 1px;
+    height: 3.6rem;
+    width: 25rem ;
     border:0px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    font-size: 20px;
+}
+
+#busca:focus{
+    outline: none;
 }
 
 .boton_buscar{
-    margin: 0px;
-    height: 40px;
-    width: 50px;
-    background-color:var(--color-extra2);
+    height: 60px;
+    width: 65px;
+    background-color:var(--color-extra3);
     border: 0px;
     border-left: 2px solid var(--color-extra1);
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
 .boton_buscar:hover{
     background-color: var(--color-extra2);
+}
+
+.imagen_buscar{
+    width: 40px;
+}
+
+/*Inicio Sesion*/
+
+.inicio_sesion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--color-base3);
+    font-size: 25px;
+}
+
+.inicio_sesion:hover{
+    color: var(--color-base1);
+    transition: color ease-in-out 0.5s;
+}
+
+.imagen_usuario{
+    width: 90px;
+}
+
+/*Carrito de compras*/
+
+.imagen_carrito{
+    width: 85px;
 }
 
 /*Enlaces del menu */
@@ -81,8 +123,8 @@ nav{
 }
 
 .enlaces{
-    background-color:#d8f5dd;
-    border:2px solid #415d47; 
+    background-color:var(--color-base3);
+    border:2px solid var(--color-base1); 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -90,13 +132,18 @@ nav{
 }
 
 .a_enlaces{
-    color: #415d47; 
-    border-right:3px solid #415d47; 
-    padding-top:25px;
-    padding-bottom:25px;
-    padding-left:92.5px; 
-    padding-right:92px; 
+    color: var(--color-base1); 
+    border-right:3px solid var(--color-base1); 
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+    padding-left:5.75rem; 
+    padding-right:5.75rem; 
     font-size: 35px;    
+}
+
+.a_enlaces:hover{
+    color: var(--color-base2);
+    transition: color ease-in-out 0.5s;
 }
 
 .a_enlaces:last-of-type{
@@ -111,37 +158,39 @@ nav{
     height: 20rem;
 }
 
-h1{
+h1.texto_banner{
     margin: 0rem;
-    color: #415d47;
+    color: var(--color-base1);
 }
 
 h2.texto_novedades{
-    color:#415d47 ;
+    color:var(--color-base1) ;
 }
 
-/*Seccion Novedades*/
-#novedades{
+/*Seccion Novedades y Recomendado*/
+#novedades,#recomendado{
     margin: 2rem
 }
 
-/*Productos*/
-#novedades_productos{
+#novedades_productos,#recomendado_productos{
     display: flex; 
     flex-direction:row;
     justify-content: space-between;
     margin-top: 25px;
 }
 
+/*Lista Productos*/
 #lista_productos{
     display: grid;
 }
 
-.productos{}
-
+/*Productos*/
+.productos{
+    margin: 1rem;
+}
 
 .imagenes_productos{
-    border: 3px solid #415d47;
+    border: 3px solid var(--color-base1);
     border-radius: 5px;
 }
 
@@ -151,13 +200,13 @@ h2.texto_novedades{
 }
 
 .texto_producto,.texto_precio{
-    color: #415d47;
+    color: var(--color-base1);
 }
 
 /*Footer*/
 
 footer{
-    background-color: #7AAA83;
+    background-color: var(--color-base2);
     display:flex;
     justify-content:space-around;
 }
@@ -169,25 +218,31 @@ footer{
 
 .imagenes_redes{
     width: 40px;
+    margin: 0.5rem;
 }
 
 #masEnlaces{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin:1rem;
     border:2px solid var(--color-base1);
     background-color: var(--color-base3);
 }
 
 .enlaces_footer{
-    margin:0.5rem
+    padding-top:1rem;
+    padding-bottom:1rem;
+    padding-left:5.7rem; 
+    padding-right:5.7rem; 
+    border-right:2px solid var(--color-base1);
+}
+
+.enlaces_footer:last-of-type{
+    border:none;
 }
 
 .enlaces_footer > a{
     color:var(--color-base1);
+    font-size: 20px;
 }
-
-
-
-
-        
