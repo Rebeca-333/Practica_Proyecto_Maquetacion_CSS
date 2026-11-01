@@ -23,7 +23,7 @@
     font-style: normal;
 }
 
-/*Header*/
+/*HEADER*/
 
 /*Menu Principal*/
 #menuPrincipal{
@@ -150,7 +150,7 @@ nav{
 } 
 
 
-/*Main*/
+/*MAIN*/
 #banner{
     background-image: url(../img/banner.png);
     background-size:auto;
@@ -278,7 +278,203 @@ nav{
     color: var(--color-base1);
 }
 
-/*Footer*/
+
+/* SESION/REGISTRARSE */        
+
+/* Contenedor principal con ambos formularios */
+.identificarse {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 40px 20px;
+}
+
+/* Caja de cada formulario*/
+.usuario {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-base2);
+    border: 2px solid var(--color-base1);
+    border-radius: 8px;
+    padding: 25px;
+    width: 400px;
+}
+
+/* Títulos de los formularios*/
+.usuario > form > h2 {
+    color: var(--color-fondo-claro);
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* Textos de las etiquetas */
+.usuario > form > label {
+    color: var(--color-fondo-claro);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Cajas para rellenar los datos */
+.usuario > form  > label > input {
+    width: 100%;
+    height: 30px;   
+    padding: 0px 0px 0px 2px;
+    margin-top: 5px;
+    border: 2px solid var(--color-extra1);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Botones funcionales */
+.usuario > form > .botones_identificarse {
+    width: auto;
+    height: auto;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+    background-color: var(--color-extra3);
+}
+
+/* Efecto al pasar el ratón por encima de las cajas */
+.usuario form > label > input:hover {
+    background-color: #FFFCF5;
+}
+
+/* Efecto al pasar el ratón por encima de los botones */
+.usuario > form > label  > .botones_identificarse:hover {
+    background-color: var(--color-extra1);
+}
+
+/*COMPRAR*/
+
+/* Caja principal del formulario de pedido */
+        .compra {
+            background-color: #7AAA83;
+            border: 2px solid #415d47;
+            border-radius: 8px;
+            padding: 25px;
+            width: 450px;
+        }
+
+        /* Título de la sección */
+        .compra h2 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        /* Textos de las etiquetas */
+        .compra label {
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Cajas de texto */
+        .compra input {
+            width: 100%;
+            height: 30px;
+            padding: 0px 0px 0px 5px;
+            margin-top: 5px;
+            border: 2px solid #285b64;
+            border-radius: 4px;
+            background-color: white;
+        }
+
+        /* Texto del precio total */
+        .compra p {
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        /* Botón de comprar */
+        .compra label input {
+            width: auto;
+            height: auto;
+            padding: 8px 20px;
+            background-color: #caf1fa;
+            color: #415d47;
+            border: 2px solid #285b64;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /*Efecto del boton*/
+        .compra label input:hover {
+            background-color: #285B64;
+            color: white;
+        }
+
+/* SOBRE NOSOTROS */
+
+/* Contenedor principal de las dos columnas */
+.nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 2. Cajas en su sitio */
+.imagen {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.info {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.mision {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.ubicacion {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* Cajas de las columnas (verde oscuro) */
+.mision, .info, .ubicacion {
+    background-color: var(--color-base2);
+    border: 2px solid var(--color-base1) ;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+/* Titulos de las cajas*/
+h2 {
+    color: var(--color-fondo-claro);
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* Cajas con la información (verde claro) */
+.texto, .caja-mapa {
+    background-color: var(--color-fondo-claro);
+    border: 1px solid var(--color-base1);
+    border-radius: 6px;
+    padding: 15px;
+    color: var(--color-base1);
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Imagenes */
+.img-nosotros {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 2px solid var(--color-base1);
+}
+
+/*FOOTER*/
 
 footer{
     background-color: var(--color-base2);
@@ -325,4 +521,22 @@ footer{
 .enlaces_footer > a:hover{
     color: var(--color-base2);
     transition: color ease-in-out 0.2s;
+}
+
+
+/* MEDIA QUERY*/
+
+@media (max-width: 600px) {
+    .nosotros {
+        padding: 20px 10px; 
+        gap: 15px;          
+    }
+
+    .mision, .info, .ubicacion {
+        padding: 15px;    
+    }
+
+    .mision h2, .info h2, .ubicacion h2 {
+        font-size: 18px;
+    }
 }

@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilo.css">
 </head>
 <body>
 
-<header>
+    <header>
         <div id="menuPrincipal">
-            <img src="./img/Logo.png" alt="" class="logo">
+            <a href="./index.html"><img src="./img/Logo.png" alt="logo" class="logo"></a>
             <div id="buscador">
                 <form action="#" method="get">
                     <input type="text" name="buscador" id="busca">
@@ -18,59 +21,61 @@
                 </form>
             </div>
             <div id="usuario">
-                <img src="./img/person.svg" alt="" class="imagen_usuario">
-                <a href="#" class="inicio_sesion">Inicio Sesion</a>
+                <a href="./sesion.html" class="inicio_sesion">
+                    <img src="./img/person.svg" alt="" class="imagen_usuario">
+                    Inicio<br>Sesion
+                </a>
             </div>
             <div id="compra">
-                <a href="#"><img src="./img/shopping_cart.svg" alt="carrito" class="imagen_carrito"></a>
+                <a href="./comprar.html" class="carrito"><img src="./img/shopping_cart.svg" alt="carrito" class="imagen_carrito"></a>
             </div>
         </div>
         <div class="enlaces">
             <nav>
-                <a href="#" class="a_enlaces">Mujer</a>
-                <a href="#" class="a_enlaces">Hombre</a>
-                <a href="#" class="a_enlaces">Niño/a</a>
-                <a href="#" class="a_enlaces">Accesorios</a>
-                <a href="#" class="a_enlaces">Otros</a>
+                <a href="./lista-productos.html" class="a_enlaces">Mujer</a>
+                <a href="./lista-productos.html" class="a_enlaces">Hombre</a>
+                <a href="./lista-productos.html" class="a_enlaces">Niño/a</a>
+                <a href="./lista-productos.html" class="a_enlaces">Accesorios</a>
+                <a href="./lista-productos.html" class="a_enlaces">Otros</a>
             </nav>
         </div>
     </header>
 
-<main>
-    <section class="nosotros">
-            <div class="imagen">
-                <img src="./img/nosotros.jpg" alt="Ropa chulona" class="img-nosotros">
-            </div>
-
-            <div class="mision">
-                <h2>Nuestra misión</h2>
-                <div class="texto">
-                    <p>Queremos fomentar una forma de consumir moda más consciente y aprovechar más tiempo las prendas.</p>
+    <main>
+        <section class="nosotros">
+                <div class="imagen">
+                    <img src="./img/nosotros.jpg" alt="Ropa chulona" class="img-nosotros">
                 </div>
-                <h2>Moda que vuelve a empezar</h2>
-                <div class="texto">
-                    <p>Eco Estilo nace con una idea sencilla: una prenda que puede utilizarse no debería convertirse en un residuo.</p>
-                </div>
-            </div>
 
-            <div class="info">
-                <h2>Sobre nosotros</h2>
-                <div class="texto">
-                    <p>En Eco Estilo creemos que vestir bien no significa comprar más.</p>
-                    <p>Seleccionamos prendas de segunda mano en buen estado para que puedas encontrar ropa única, ahorrar y contribuir a reducir los residuos textiles.</p>
+                <div class="mision">
+                    <h2>Nuestra misión</h2>
+                    <div class="texto">
+                        <p>Queremos fomentar una forma de consumir moda más consciente y aprovechar más tiempo las prendas.</p>
+                    </div>
+                    <h2>Moda que vuelve a empezar</h2>
+                    <div class="texto">
+                        <p>Eco Estilo nace con una idea sencilla: una prenda que puede utilizarse no debería convertirse en un residuo.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="ubicacion">
-                <h2>Nuestra tienda física</h2>
-                <div class="caja-mapa">
-                    <img src="./img/mapa.png" alt="Mapa" class="img-nosotros">
+                <div class="info">
+                    <h2>Sobre nosotros</h2>
+                    <div class="texto">
+                        <p>En Eco Estilo creemos que vestir bien no significa comprar más.</p>
+                        <p>Seleccionamos prendas de segunda mano en buen estado para que puedas encontrar ropa única, ahorrar y contribuir a reducir los residuos textiles.</p>
+                    </div>
                 </div>
-            </div>
-    </section>
-</main>
 
- <footer>
+                <div class="ubicacion">
+                    <h2>Nuestra tienda física</h2>
+                    <div class="caja-mapa">
+                        <img src="./img/mapa.png" alt="Mapa" class="img-nosotros">
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <footer>
         <div id="redes">
             <a href="#"><img src="./img/Facebook.png" alt="" class="imagenes_redes"></a>
             <a href="#"><img src="./img/Instagram.png" alt="" class="imagenes_redes"></a>
@@ -78,7 +83,7 @@
         </div>
         <div id="masEnlaces">
             <div class="enlaces_footer">
-                <a href="#" >Sobre Nosotros</a>
+                <a href="./sobreNosotros.html" >Sobre Nosotros</a>
             </div>
             <div class="enlaces_footer">
                 <a href="#" >Terminos y Condiciones</a>

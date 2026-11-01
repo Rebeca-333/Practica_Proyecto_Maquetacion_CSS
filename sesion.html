@@ -4,16 +4,16 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Iniciar sesión / Registrarse</title>
-   <link rel="stylesheet" href="style.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="./css/estilo.css">
 </head>
 <body>
     
     <header>
         <div id="menuPrincipal">
-            <img src="./img/Logo.png" alt="" class="logo">
+            <a href="./index.html"><img src="./img/Logo.png" alt="logo" class="logo"></a>
             <div id="buscador">
                 <form action="#" method="get">
                     <input type="text" name="buscador" id="busca">
@@ -21,70 +21,70 @@
                 </form>
             </div>
             <div id="usuario">
-                <img src="./img/person.svg" alt="" class="imagen_usuario">
-                <a href="#" class="inicio_sesion">Inicio Sesion</a>
+                <a href="./sesion.html" class="inicio_sesion">
+                    <img src="./img/person.svg" alt="" class="imagen_usuario">
+                    Inicio<br>Sesion
+                </a>
             </div>
             <div id="compra">
-                <a href="#"><img src="./img/shopping_cart.svg" alt="carrito" class="imagen_carrito"></a>
+                <a href="./comprar.html" class="carrito"><img src="./img/shopping_cart.svg" alt="carrito" class="imagen_carrito"></a>
             </div>
         </div>
         <div class="enlaces">
             <nav>
-                <a href="#" class="a_enlaces">Mujer</a>
-                <a href="#" class="a_enlaces">Hombre</a>
-                <a href="#" class="a_enlaces">Niño/a</a>
-                <a href="#" class="a_enlaces">Accesorios</a>
-                <a href="#" class="a_enlaces">Otros</a>
+                <a href="./lista-productos.html" class="a_enlaces">Mujer</a>
+                <a href="./lista-productos.html" class="a_enlaces">Hombre</a>
+                <a href="./lista-productos.html" class="a_enlaces">Niño/a</a>
+                <a href="./lista-productos.html" class="a_enlaces">Accesorios</a>
+                <a href="./lista-productos.html" class="a_enlaces">Otros</a>
             </nav>
         </div>
     </header>
    
    
    <main>
-   <section class="identificarse">
-   <div class="usuario">
-       <form action="formulario_registro.php" method="POST">
-               <h2>Registrarse</h2>
-               <label for="nombre">Nombre completo <br>
-                   <input type="text" name="nombre_completo">
-               </label> <br> <br>
-               <label for="fecha_nacimiento">Fecha de nacimiento<br>
-                   <input type="date" name="fecha_nacimiento">
-               </label> <br> <br>
-               <label for="correo">Correo electrónico<br>
-                   <input type="email" name="correo">
-               </label> <br> <br>
-               <label for="usuario">Nombre usuario<br>
-                   <input type="text" name="usuario">
-               </label> <br> <br>
-               <label for="contrasena">Contraseña <br>
-                   <input type="password" name="contrasena">
-               </label> <br> <br>
-               <label for="confirmar_contrasena">Confirmar contraseña<br>
-                   <input type="password" name="confirmar_contrasena">
-               </label> <br> <br> 
-               <label for="crear_registro">
-                   <input type="button" value="Crear" class="botones_identificarse">
-               </label> <br> <br> 
-       </form>
-       <br> <br>
-   </div>
-       
-   <div class="usuario">
-       <form action="formulario_sesion.php" method="POST">
-               <h2>Iniciar sesión</h2>
-               <label for="usuario">Nombre usuario<br>
-                   <input type="text" name="usuario">
-               </label> <br> <br>
-               <label for="contrasena">Contraseña <br>
-                   <input type="password" name="contrasena">
-               </label> <br> <br>
-               <label for="iniciar_sesion">
-                   <input type="button" value="Entrar" class="botones_identificarse">
-               </label> <br> <br> 
-       </form>
-   </div>
-   </div>
+        <section class="identificarse">
+            <div class="usuario">
+                <form action="#" method="POST">
+                        <h2>Registrarse</h2>
+                        <label for="nombre">Nombre completo <br>
+                            <input type="text" name="nombre_completo">
+                        </label> <br> <br>
+                        <label for="fecha_nacimiento">Fecha de nacimiento<br>
+                            <input type="date" name="fecha_nacimiento">
+                        </label> <br> <br>
+                        <label for="correo">Correo electrónico<br>
+                            <input type="email" name="correo">
+                        </label> <br> <br>
+                        <label for="usuario">Nombre usuario<br>
+                            <input type="text" name="usuario">
+                        </label> <br> <br>
+                        <label for="contrasena">Contraseña <br>
+                            <input type="password" name="contrasena">
+                        </label> <br> <br>
+                        <label for="confirmar_contrasena">Confirmar contraseña<br>
+                            <input type="password" name="confirmar_contrasena">
+                        </label> <br> <br> 
+                        <input type="button" value="Crear" class="botones_identificarse">
+                        <br> <br> 
+                </form>
+                <br> <br>
+            </div>
+                
+            <div class="usuario">
+                <form action="#" method="POST">
+                        <h2>Iniciar sesión</h2>
+                        <label for="usuario">Nombre usuario<br>
+                            <input type="text" name="usuario">
+                        </label> <br> <br>
+                        <label for="contrasena">Contraseña <br>
+                            <input type="password" name="contrasena">
+                        </label> <br> <br>
+                        <input type="button" value="Entrar" class="botones_identificarse">
+                         <br> <br> 
+                </form>
+            </div>
+        </section>
    </main>
 
 
@@ -97,7 +97,7 @@
         </div>
         <div id="masEnlaces">
             <div class="enlaces_footer">
-                <a href="#" >Sobre Nosotros</a>
+                <a href="./sobreNosotros.html" >Sobre Nosotros</a>
             </div>
             <div class="enlaces_footer">
                 <a href="#" >Terminos y Condiciones</a>
