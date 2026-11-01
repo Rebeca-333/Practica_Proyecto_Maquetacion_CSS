@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Iniciar sesión / Registrarse</title>
+   <link rel="stylesheet" href="style.css">
+   <style>
+       * {
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+           font-family: sans-serif;
+           }
+
+
+           /* Encabezado principal */
+           .header {
+           border: 1px solid #000;
+           width: 100%;
+           }
+
+
+           /* Fila superior verde */
+           .top-bar {
+           background-color: #7a9e79;
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           padding: 10px 20px;
+           }
+
+
+           /* Estilo del Logo */
+           .logo {
+           background-color: #ffffff;
+           border-radius: 12px;
+           padding: 8px 15px;
+           text-align: center;
+           color: #3b6339;
+           font-weight: bold;
+           font-size: 12px;
+           border: 1px solid #ccc;
+           }
+           .logo span {
+           font-size: 20px;
+           }
+
+
+           /* Estilo de la Barra de búsqueda */
+           .search-bar {
+           display: flex;
+           width: 350px;
+           height: 35px;
+           }
+           .search-bar input {
+           flex: 1;
+           border: 1px solid #666;
+           border-radius: 6px 0 0 6px;
+           outline: none;
+           padding: 0 10px;
+           }
+           .search-bar button {
+           width: 45px;
+           background-color: #cce7f0;
+           border: 1px solid #666;
+           border-left: none;
+           border-radius: 0 6px 6px 0;
+           font-size: 16px;
+           }
+
+
+           /* Usuario / Iniciar Sesión */
+           .user-login {
+           display: flex;
+           align-items: center;
+           gap: 8px;
+           }
+           .user-icon {
+           font-size: 32px;
+           color: #bce3f2;
+           }
+           .user-login a {
+           color: #ffffff;
+           font-weight: bold;
+           font-size: 14px;
+           text-decoration: none;
+           line-height: 1.2;
+           }
+
+
+           /* Carrito con contador */
+           .cart {
+           position: relative;
+           font-size: 30px;
+           color: #bce3f2;
+           }
+           .badge {
+           position: absolute;
+           top: -2px;
+           right: -8px;
+           background-color: #fff;
+           border: 1px solid #000;
+           border-radius: 50%;
+           width: 16px;
+           height: 16px;
+           font-size: 10px;
+           color: #000;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           }
+
+
+           /* Menú inferior claro */
+           .nav-bar {
+           background-color: #d8f3dc;
+           display: flex;
+           border-top: 1px solid #000;
+           }
+           .nav-bar a {
+           flex: 1;
+           text-align: center;
+           padding: 10px 0;
+           color: #2b4c27;
+           font-weight: bold;
+           text-decoration: none;
+           border-right: 1px solid #000;
+           }
+           .nav-bar a:last-child {
+           border-right: none;
+           }
+
+
+           #usuario{
+               display: flex;
+               padding: 5%;
+           }
+
+
+      /* Caja principal del formulario de pedido */
+        .compra {
+            background-color: #7AAA83;
+            border: 2px solid #415d47;
+            border-radius: 8px;
+            padding: 25px;
+            width: 450px;
+        }
+
+        /* Título de la sección */
+        .compra h2 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        /* Textos de las etiquetas */
+        .compra label {
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Cajas de texto */
+        .compra input {
+            width: 100%;
+            height: 30px;
+            padding: 0px 0px 0px 5px;
+            margin-top: 5px;
+            border: 2px solid #285b64;
+            border-radius: 4px;
+            background-color: white;
+        }
+
+        /* Texto del precio total */
+        .compra p {
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        /* Botón de comprar */
+        .compra label input {
+            width: auto;
+            height: auto;
+            padding: 8px 20px;
+            background-color: #caf1fa;
+            color: #415d47;
+            border: 2px solid #285b64;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Efecto hover del botón */
+        .compra label input:hover {
+            background-color: #285B64;
+            color: white;
+        }
+    
+   </style>
+</head>
+<body>
+   <header class="header">
+   <!-- Fila superior -->
+   <div class="top-bar">
+     <!-- Logo -->
+     <div class="logo">
+       <span>🌱</span>
+       <div>ECO ESTILO</div>
+     </div>
+
+
+     <!-- Buscador -->
+     <div class="search-bar">
+       <input type="text">
+       <button>🔍</button>
+     </div>
+
+
+     <!-- Iniciar Sesión -->
+     <div class="user-login">
+       <span class="user-icon">👤</span>
+       <a href="#"><u>Iniciar<br>Sesión</u></a>
+     </div>
+
+
+     <!-- Carrito -->
+     <div class="cart">
+       🛒<span class="badge">0</span>
+     </div>
+   </div>
+
+
+   <!-- Navegación inferior -->
+   <nav class="nav-bar">
+     <a href="#"><u>Mujer</u></a>
+     <a href="#"><u>Hombre</u></a>
+     <a href="#"><u>Niño/a</u></a>
+     <a href="#"><u>Accesorios</u></a>
+     <a href="#"><u>Otros</u></a>
+   </nav>
+ </header>
+   <main>
+   <section class="compra">
+       <form action="comprar.php" method="POST">
+               <h2>Pedido</h2>
+               <label for="direccion">Dirección<br>
+                   <input type="text" name="direccion">
+               </label> <br> <br>
+               <label for="tarjeta">Número de tarjeta <br>
+                   <input type="text" name="tarjeta">
+               </label> <br> <br>
+               <label for="productos">Productos seleccionados<br>
+                   <input type="text" name="productos">
+               </label> <br> <br>
+               <label for="precio_total"> Total:
+                   <p style="display: inline-block;" id="precio_total" id="precio"> $</p>
+               </label> <br> <br>  
+               <label for="comprar">
+                   <input type="button" value="Comprar">
+               </label> <br> <br> 
+       </form>
+   </section>
+   </main>
+</body>
+</html>
+
