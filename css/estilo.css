@@ -1,3 +1,135 @@
+/* Pantalla para movil*/
+@media (max-width: 600px) {
+
+    /* El menú pasa a una columna*/
+    #menuPrincipal {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #buscador {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    #busca {
+        width: 100%;
+        min-width: 0; 
+    }
+
+    #buscador form {
+        width: 100%;
+        display: flex;
+    }
+
+    .enlaces nav {
+        flex-direction: column;
+    }
+
+    .a_enlaces {
+        border-right: none;
+        border-bottom: 2px solid var(--color-base1);
+        padding: 1rem;
+        font-size: 20px;
+    }
+
+    
+/* Los detalles de producto en columna*/
+    #producto_detalle.producto_detalle, #producto_detalle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 15px auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    #producto_detalle .producto_imagen_detalle {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    #producto_detalle .imagen_producto {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #producto_detalle .producto_descripcion_detalle {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    #producto_detalle .texto_producto_descripcion {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Botón adaptado*/
+    #producto_detalle .boton_comprar {
+        width: auto;
+        min-width: 200px;
+        padding: 0.7rem 1.2rem;
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+
+    /* Productos en más filas */
+    #lista_productos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 15px;
+    }
+
+
+    /* Los formularios se ponen  en una columna*/
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 0 10px;
+    }
+
+    .contenedor .columna {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    /* El footer pasa a una columna */
+    #masEnlaces {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin-top: 15px;
+    }
+
+    .enlaces_footer {
+        padding: 1rem;
+        border-right: none;
+        border-bottom: 2px solid var(--color-base1);
+        width: 100%;
+        text-align: center;
+    }
+
+    .enlaces_footer:last-of-type {
+        border-bottom: none;
+    }
+
+}
 
 :root{
     /*Colores*/
@@ -23,7 +155,7 @@
     font-style: normal;
 }
 
-/*HEADER*/
+/* HEADER --------------------------------------------------------------------------------------------------------------------------*/
 
 /*Menu Principal*/
 #menuPrincipal{
@@ -117,27 +249,28 @@ form{
 }
 
 /*Enlaces del menu */
-nav{
-    display:flex; 
+nav {
+    display: flex;
     justify-content: space-around;
+    width: 100%; 
 }
 
-.enlaces{
-    background-color:var(--color-base3);
-    border:2px solid var(--color-base1); 
+.enlaces {
+    background-color: var(--color-base3);
+    border: 2px solid var(--color-base1); 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width:fit-content;
+    width: 100%; 
 }
 
-.a_enlaces{
-    flex:1;
+.a_enlaces {
+    flex: 1; 
     text-align: center;
     color: var(--color-base1); 
-    border-right:3px solid var(--color-base1); 
-    padding: 1.5rem 6.835rem;
-    font-size: 35px;    
+    border-right: 3px solid var(--color-base1); 
+    padding: 1rem 1rem; 
+    font-size: 22px; 
 }
 
 .a_enlaces:hover{
@@ -159,17 +292,19 @@ nav{
 
 /*Seccion Novedades y Recomendado*/
 #novedades,#recomendado{
-    margin: 2rem
+    margin: 30px
 }
 .texto_novedades,.texto_recomendado{
     color:var(--color-base1) ;
 }
 
-#novedades_productos,#recomendado_productos{
+#mostrar_productos{
     display: flex; 
-    flex-direction:row;
-    justify-content: space-between;
-    margin-top: 25px;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    gap: 20px; 
+    margin: 20px;
 }
 
 /*Lista Productos con Filtro*/
@@ -178,7 +313,7 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
-    margin: 2rem;
+    margin: 30px;
 }
 
 .imagen_filtro{
@@ -192,7 +327,7 @@ nav{
 }
 
 #lista_productos{
-    margin: 2rem;
+    margin: 30px;
     display: grid;
     grid-template-columns: repeat(5, 4fr);
     gap: 1rem;
@@ -204,19 +339,22 @@ nav{
 #producto_detalle{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin: 2rem;
+    margin: 30px;
+
 }
 
 .imagen_producto{
-    width: 600px;
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
     border: 3px solid var(--color-base1);
     border-radius: 5px;
 }
 
 .producto_descripcion_detalle{
-    margin-left: 2rem;
+    margin-left: 30px;
 }
 
 .texto_producto_descripcion{
@@ -257,14 +395,17 @@ nav{
 
 /*Productos*/
 .productos{
-    margin: 1rem;
-    width:fit-content
+    width: 220px;
+    margin: 0
 }
+
 .enlace_producto_detalle{
     text-decoration: none;
 }
 
 .imagenes_productos{
+    width: 100%;
+    height: auto;
     border: 3px solid var(--color-base1);
     border-radius: 5px;
 }
@@ -304,6 +445,7 @@ nav{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    margin: 20px 0px 20px 0px;
 }
 
 /* Caja de cada formulario */
@@ -491,12 +633,15 @@ nav{
 }
 
 
-/*FOOTER*/
+/* FOOTER -----------------------------------------------------------------------------------------------------------*/
 
 footer{
     background-color: var(--color-base2);
-    display:flex;
-    justify-content:space-around;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
 }
 
 
@@ -513,17 +658,16 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:1rem;
-    border:2px solid var(--color-base1);
+    margin: 1rem 0;
+    border: 2px solid var(--color-base1);
     background-color: var(--color-base3);
+    width: fit-content;
 }
 
 .enlaces_footer{
-    padding-top:0.7rem;
-    padding-bottom:0.7rem;
-    padding-left:5.7rem; 
-    padding-right:5.7rem; 
-    border-right:2px solid var(--color-base1);
+    padding: 0.7rem 2rem;
+    border-right: 2px solid var(--color-base1);
+    text-align: center;
 }
 
 .enlaces_footer:last-of-type{
@@ -538,22 +682,4 @@ footer{
 .enlaces_footer > a:hover{
     color: var(--color-base2);
     transition: color ease-in-out 0.2s;
-}
-
-
-/* MEDIA QUERY*/
-
-@media (max-width: 600px) {
-    .nosotros {
-        padding: 20px 10px; 
-        gap: 15px;          
-    }
-
-    .mision, .info, .ubicacion {
-        padding: 15px;    
-    }
-
-    .mision h2, .info h2, .ubicacion h2 {
-        font-size: 18px;
-    }
 }
