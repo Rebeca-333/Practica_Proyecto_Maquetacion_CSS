@@ -39,45 +39,44 @@
             </nav>
         </div>
     </header>
-   <main>
-        <section class="compra">
-            <form action="#" method="POST">
+
+
+    <main>
+        <section class="contenedor">
+            <div class="columna">
+                <form action="#" method="POST">
                     <h2>Pedido</h2>
-                    <label for="direccion">Dirección<br>
-                        <input type="text" name="direccion">
-                    </label> <br> <br>
-                    <label for="tarjeta">Número de tarjeta <br>
-                        <input type="text" name="tarjeta">
-                    </label> <br> <br>
-                    <label for="productos">Productos seleccionados<br>
-                        <input type="text" name="productos">
-                    </label> <br> <br>
-                    <label for="precio_total"> Total:
-                        <p style="display: inline-block;" id="precio_total" id="precio"> $</p>
-                    </label> <br> <br> 
-                    <input type="button" value="Comprar">
-                     <br> <br> 
-            </form>
+                    <label>Dirección<br>
+                        <input type="text" name="direccion" >
+                    </label> <br>
+                    <label>Número de tarjeta <br>
+                        <input type="text" name="tarjeta" >
+                    </label> <br>
+                    <label>Método de envio
+                        <select id="envio" name="envio">
+                            <option value="normal">Normal: 1 semana, 4$</option>
+                            <option value="express">Express: 1 día, 10$</option>
+                        </select>
+                    </label>
+                </form>
+            </div>
+            <div class="columna">
+                <form action="#" method="POST">
+                    <h2>Resumen</h2>
+                    <label>Productos seleccionados <br>
+                        <p></p>
+                    </label> <br>
+                    <label>Total:<br>
+                        <p class="precio_total"> $</p>
+                    </label> <br> <br>                         
+                    <input type="button" value="Comprar" class="boton">
+                </form>
+            </div>     
         </section>
    </main>
-   <footer>
-        <div id="redes">
-            <a href="#"><img src="./img/Facebook.png" alt="" class="imagenes_redes"></a>
-            <a href="#"><img src="./img/Instagram.png" alt="" class="imagenes_redes"></a>
-            <a href="#"><img src="./img/TikTok.png" alt="" class="imagenes_redes"></a>
-        </div>
-        <div id="masEnlaces">
-            <div class="enlaces_footer">
-                <a href="./sobreNosotros.html" >Sobre Nosotros</a>
-            </div>
-            <div class="enlaces_footer">
-                <a href="#" >Terminos y Condiciones</a>
-            </div>
-            <div class="enlaces_footer">
-                <a href="#" >Ayuda</a>
-            </div>
-        </div>
-    </footer>
+
+
+
 </body>
 </html>
 
