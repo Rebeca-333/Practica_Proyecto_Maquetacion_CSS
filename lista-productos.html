@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/estilo.css" title="Estilo Principal">
+    <link rel="alternate stylesheet" href="./css/alto-contraste.css" title="Alto Contraste" id="link-contraste">
 </head>
 <body>
     <header>
@@ -27,6 +28,9 @@
             </div>
             <div id="compra">
                 <a href="./comprar.html" class="carrito"><img src="./img/shopping_cart.svg" alt="carrito" class="imagen_carrito"></a>
+            </div>
+            <div id="boton_contraste">
+                <button type="button" class="boton_altoContraste">Alto Contraste</button>
             </div>
         </div>
         <div class="enlaces">
@@ -185,5 +189,24 @@
             </div>
         </div>
     </footer>
+
+    <!--Codigo para el boton de alto contraste-->
+    <script>
+        onload=()=>{
+            document.getElementsByClassName("boton_altoContraste")[0].addEventListener("click",CambiarAltoContraste)
+        }
+
+        const stylesheetAlterno = document.getElementById('link-contraste');
+
+        function CambiarAltoContraste(){
+            if (stylesheetAlterno.disabled) {
+                stylesheetAlterno.disabled = false; // ACTIVAR el archivo alternativo
+            } else {
+                stylesheetAlterno.disabled = true;  // DESACTIVAR el archivo alternativo
+            }
+        }
+
+    </script>
+
 </body>
 </html>

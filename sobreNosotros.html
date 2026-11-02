@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/estilo.css" title="Estilo Principal">
+    <link rel="alternate stylesheet" href="./css/alto-contraste.css" title="Alto Contraste" id="link-contraste">
 </head>
 <body>
 
@@ -29,6 +30,9 @@
             <div id="compra">
                 <a href="./comprar.html" class="carrito"><img src="./img/shopping_cart.svg" alt="carrito" class="imagen_carrito"></a>
             </div>
+            <div id="boton_contraste">
+                <button type="button" class="boton_altoContraste">Alto Contraste</button>
+            </div>
         </div>
         <div class="enlaces">
             <nav>
@@ -43,10 +47,10 @@
 
     <main>
         <section class="nosotros">
+            <div class="columna_izquierda">
                 <div class="imagen">
-                    <img src="./img/nosotros.png" alt="Ropa chulona" class="img-nosotros">
+                    <img src="./img/nosotros.png" alt="Mujer atendiendo" class="img-nosotros">
                 </div>
-
                 <div class="mision">
                     <h2>Nuestra misión</h2>
                     <div class="texto">
@@ -57,7 +61,8 @@
                         <p>Eco Estilo nace con una idea sencilla: una prenda que puede utilizarse no debería convertirse en un residuo.</p>
                     </div>
                 </div>
-
+            </div>
+            <div class="columna_derecha">
                 <div class="info">
                     <h2>Sobre nosotros</h2>
                     <div class="texto">
@@ -65,13 +70,13 @@
                         <p>Seleccionamos prendas de segunda mano en buen estado para que puedas encontrar ropa única, ahorrar y contribuir a reducir los residuos textiles.</p>
                     </div>
                 </div>
-
                 <div class="ubicacion">
                     <h2>Nuestra tienda física</h2>
                     <div class="caja-mapa">
                         <img src="./img/mapa.png" alt="Mapa" class="img-nosotros">
                     </div>
                 </div>
+            </div>
         </section>
     </main>
 
@@ -95,6 +100,23 @@
         </div>
     </footer>
 
+    <!--Codigo para el boton de alto contraste-->
+    <script>
+        onload=()=>{
+            document.getElementsByClassName("boton_altoContraste")[0].addEventListener("click",CambiarAltoContraste)
+        }
+
+        const stylesheetAlterno = document.getElementById('link-contraste');
+
+        function CambiarAltoContraste(){
+            if (stylesheetAlterno.disabled) {
+                stylesheetAlterno.disabled = false; // ACTIVAR el archivo alternativo
+            } else {
+                stylesheetAlterno.disabled = true;  // DESACTIVAR el archivo alternativo
+            }
+        }
+
+    </script>
 
 </body>
 </html>
