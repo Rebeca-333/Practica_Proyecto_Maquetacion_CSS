@@ -235,9 +235,15 @@ main #lista_productos .productos {
 
 }
 
+.producto_imagen_detalle{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
 .imagen_producto{
-    width: 100%; 
-    max-width: 400px; 
+    width: 200%; 
+    max-width: 500px; 
     height: auto;
     border: 3px solid var(--color-base1);
     border-radius: 5px;
@@ -617,7 +623,7 @@ footer{
         width: 100%;
     }
 
-    #producto_detalle .producto_imagen_detalle {
+    #producto_detalle  .producto_imagen_detalle {
         width: 100%;
         display: flex;
         justify-content: center;
