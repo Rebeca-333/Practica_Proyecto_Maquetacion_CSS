@@ -49,6 +49,10 @@ body{
     color: var(--color-base4);
 }
 
+.texto_producto_descripcion{
+    color:var(--color-base4);
+}
+
 /*Formularios de Inicio Sesion/Registro y Comprar*/
 
 .contenedor .columna{
