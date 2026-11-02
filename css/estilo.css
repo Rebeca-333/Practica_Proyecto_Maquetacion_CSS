@@ -115,6 +115,23 @@ form{
     width: 85px;
 }
 
+/*Boton para cambiar alto contraste*/
+
+.boton_altoContraste{
+    background-color: var(--color-base3);
+    color: var(--color-base1);
+    border: 2px solid var(--color-base1);
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 0.5rem 1rem;  
+}
+
+.boton_altoContraste:hover{
+    background-color: var(--color-base1);
+    color: var(--color-base3);
+    transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
 /*Enlaces del menu */
 nav {
     display: flex;
