@@ -279,146 +279,162 @@ nav{
 }
 
 
-/* SESION/REGISTRARSE */        
+/* SESION/REGISTRARSE ------------------------------------------------------------------------------------------------------------------------------------------- */        
 
-/* Contenedor principal con ambos formularios */
-.identificarse {
+/* Contenedor principal para ambos formularios */
+.contenedor {
     display: flex;
-    justify-content: center;
-    gap: 100px;
-    padding: 40px 20px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    margin: 40px 0;
+    padding: 0 30px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
-/* Caja de cada formulario*/
-.usuario {
+/* Columna de cada formulario */
+.contenedor .columna {
+    background-color: var(--color-base2);
+    border: 3px solid var(--color-base1);
+    border-radius: 8px;
+    padding: 30px;
+    width: 450px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    background-color: var(--color-base2);
-    border: 2px solid var(--color-base1);
-    border-radius: 8px;
-    padding: 25px;
-    width: 400px;
 }
 
-/* Títulos de los formularios*/
-.usuario > form > h2 {
-    color: var(--color-fondo-claro);
-    margin-bottom: 15px;
-    font-size: 22px;
-}
-
-/* Textos de las etiquetas */
-.usuario > form > label {
-    color: var(--color-fondo-claro);
-    font-weight: bold;
-    font-size: 14px;
-}
-
-/* Cajas para rellenar los datos */
-.usuario > form  > label > input {
+/* Caja de cada formulario */
+.contenedor .columna form {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 30px;   
-    padding: 0px 0px 0px 2px;
-    margin-top: 5px;
-    border: 2px solid var(--color-extra1);
+    box-sizing: border-box;
+    align-items: start;
+    padding-bottom: 5px;
+}
+
+/* Títulos de los formularios */
+.contenedor h2 {
+    color: var(--color-fondo-claro);
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    width: 100%;
+}
+
+/* Etiquetas de los campos */
+.contenedor label {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-fondo-claro);
+    font-size: 18px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+
+/* Campos donde se rellenan los datos */
+.contenedor input {
+    height: 40px;
+    width: 100%;
     border-radius: 4px;
+    border: 1px solid var(--color-base1);
+    padding: 0 10px;
+    font-size: 16px;
+    background-color: var(--color-fondo-claro);
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+
+/* Efecto del campo cuando pase por encima */
+.contenedor input:hover {
+    background-color: var(--color-extra2);
+}
+
+/* Efecto del campo cuando lo seleccione */
+.contenedor input:focus-within {
+    background-color: var(--color-extra2);
+}
+
+/* Boton que envia los datos */
+.contenedor .boton {
+    background-color: var(--color-base3);
+    color: var(--color-base1);
+    border: 2px solid var(--color-base1);
+    border-radius: 5px;
+    padding: 8px 25px 35px;
+    font-size: 18px;
     cursor: pointer;
+    width: fit-content;
 }
 
-/* Botones funcionales */
-.usuario > form > .botones_identificarse {
-    width: auto;
+/* Efecto del boton cuando pase por encima */
+.boton:hover {
+    background-color: var(--color-extra2);
+    transition: background-color ease-in-out 0.4s;
+}
+
+
+
+
+/* COMPRAR --------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Opciones del despelgable de envio */
+.contenedor input, .contenedor select {
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--color-base1);
+    padding: 0 10px;
+    font-size: 16px;
+    background-color: var(--color-fondo-claro);
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+
+/* Efecto del desplegable*/
+.contenedor input:hover, .contenedor select:hover {
+    background-color: var(--color-extra2);
+}
+
+/* Lista de productos anteriormente seleccionados */
+.contenedor label p {
+    background-color: var(--color-fondo-claro);
+    height: 150px;
+    border: 1px solid var(--color-base1);
+    border-radius: 4px;
+    margin-top: 6px;
+    width: 100%;
+}
+
+/* Precio total */
+.contenedor label .precio_total {
     height: auto;
-    font-weight: bold;
-    padding: 5px 10px 5px 10px;
-    background-color: var(--color-extra3);
+    color: var(--color-base1);
+    text-align: end;
+    padding: 8px;
 }
 
-/* Efecto al pasar el ratón por encima de las cajas */
-.usuario form > label > input:hover {
-    background-color: #FFFCF5;
-}
 
-/* Efecto al pasar el ratón por encima de los botones */
-.usuario > form > label  > .botones_identificarse:hover {
-    background-color: var(--color-extra1);
-}
 
-/*COMPRAR*/
 
-/* Caja principal del formulario de pedido */
-        .compra {
-            background-color: #7AAA83;
-            border: 2px solid #415d47;
-            border-radius: 8px;
-            padding: 25px;
-            width: 450px;
-        }
-
-        /* Título de la sección */
-        .compra h2 {
-            color: white;
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-
-        /* Textos de las etiquetas */
-        .compra label {
-            color: white;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        /* Cajas de texto */
-        .compra input {
-            width: 100%;
-            height: 30px;
-            padding: 0px 0px 0px 5px;
-            margin-top: 5px;
-            border: 2px solid #285b64;
-            border-radius: 4px;
-            background-color: white;
-        }
-
-        /* Texto del precio total */
-        .compra p {
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-            margin-top: 5px;
-        }
-
-        /* Botón de comprar */
-        .compra label input {
-            width: auto;
-            height: auto;
-            padding: 8px 20px;
-            background-color: #caf1fa;
-            color: #415d47;
-            border: 2px solid #285b64;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /*Efecto del boton*/
-        .compra label input:hover {
-            background-color: #285B64;
-            color: white;
-        }
-
-/* SOBRE NOSOTROS */
+/* SOBRE NOSOTROS --------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Contenedor principal de las dos columnas */
 .nosotros {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 80px;
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* 2. Cajas en su sitio */
+/* Cajas en su sitio */
 .imagen {
     grid-column: 1;
     grid-row: 1;
@@ -442,13 +458,13 @@ nav{
 /* Cajas de las columnas (verde oscuro) */
 .mision, .info, .ubicacion {
     background-color: var(--color-base2);
-    border: 2px solid var(--color-base1) ;
+    border: 2px solid var(--color-base1);
     border-radius: 8px;
     padding: 25px;
 }
 
 /* Titulos de las cajas*/
-h2 {
+.nosotros h2 {
     color: var(--color-fondo-claro);
     margin-bottom: 15px;
     font-size: 22px;
@@ -473,6 +489,7 @@ h2 {
     border-radius: 6px;
     border: 2px solid var(--color-base1);
 }
+
 
 /*FOOTER*/
 
